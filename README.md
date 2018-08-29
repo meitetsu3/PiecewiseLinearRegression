@@ -14,7 +14,9 @@ Some examples of piecewise linear regression applications are linked below:
 * [Water-cement ration v.s. compressive strength](https://onlinecourses.science.psu.edu/stat501/node/310/)
 * [Piecewise Linear Regression: A Statistical Method for the Analysis of the Relationship between Traffic Signal Parameters and Air Pollutant Emissions](http://atrf.info/papers/2016/files/ATRF2016_Full_papers_resubmission_64.pdf)
 
-###  Neural Network Model
+###  Neural Network Model application
 
-- 
+ As a framework to determine piecewise linear regression model, we try to use neural network. The benefit is that we can remove the manual input and let the data decide the number of segments and breakpoints. 
+
+
 
