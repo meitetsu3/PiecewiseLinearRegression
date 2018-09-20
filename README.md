@@ -1,8 +1,8 @@
 # Piecewise Linear Regression using neural network
 
-![regression1](D:\Documents\GitHub\PiecewiseLinearRegression\regression1.png)
+![regression1](/regression1.png)
 
-![regression2](D:\Documents\GitHub\PiecewiseLinearRegression\regression2.png)
+![regression2](/regression2.png)
 
 ### Motivation
 
