@@ -38,12 +38,7 @@ Some examples of piecewise linear regression applications are linked below:
 
   Let's try to use simple neural network with 1 hidden layer with ReLU (Rectified linear unit) activation function. The benefit is that we can remove the manual input and let the data decide the number of segments and breakpoints, with a very simple feed forward network. In comparison with [3], it is quite similar idea, but this model is much simple. The gate is ReLU with no separate parameters, and there's no clustering etc. It's just summing up output of ReLU with no bias : 
 
-<img align="center" src="/regression1.png" alt="equation1">
-
-​											->center<-
-
-<p style="text-align: center;"> aaa </p>
-
+<img src="https://latex.codecogs.com/gif.latex?$$&space;y&space;=&space;(1,...,1)&space;(W^Tx&plus;c)^&plus;&space;$$" title="$$ y = (1,...,1) (W^Tx+c)^+ $$" />
 $$
 y = (1,...,1) (W^Tx+c)^+
 $$
