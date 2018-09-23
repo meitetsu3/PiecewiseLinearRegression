@@ -32,11 +32,31 @@ Some examples of piecewise linear regression applications are linked below:
 * Clustering and regression. multi-variables. The line may be disconnected.
 * separate gate for each hidden node.
 
-###  Proposed method - Neural Network Model application
+###  Proposed method - Neural network application
 
-  Let's try to use simple neural network with 1 hidden layer with relu activation function. The benefit is that we can remove the manual input and let the data decide the number of segments and breakpoints, with a very simple feed forward network. In comparison with [3], it is quite similar idea, but the gate is simple relu, and there's no clustering etc. It's just summing up output of relus with no bias. 
+  Let's try to use simple neural network with 1 hidden layer with ReLU (Rectified linear unit) activation function. The benefit is that we can remove the manual input and let the data decide the number of segments and breakpoints, with a very simple feed forward network. In comparison with [3], it is quite similar idea, but this model is much simple. The gate is ReLU with no separate parameters, and there's no clustering etc. It's just summing up output of ReLU with no bias : 
+$$
+y = (1,...,1) (W^Tx+c)^+
+$$
+Here, $y$ is a dependent variable. $x$ is independent variables. It is a column vector with different variables in row direction. $W$ contains slopes of different input variables in the row direction and the hidden nodes in the column direction. The result of $W^Tx$ places hidden nodes in row direction. The bias $c$ is a column vector with a bias for each hidden nodes in row direction. Let me provide more concrete example. The $i$th row of $W^Tx+c$ is an input to a hidden node $h_i$, say $z_i$. The $z_i$ for 2 variables input $x = [x_1, x_2]^T$ can be written as 
+$$
+z_i = \left[\begin{array}\
+w_1\\
+w_2
+\end{array} \right]^T \left[\begin{array}\
+x_1\\
+x_2
+\end{array} \right] +c_i = w_1*x_1+w_2*x_2+c_i
+$$
+Here, $w_1$ and $w_2$ are slopes for $x_1$ and $x_2$ respectively. $c_i$ is a bias. 
 
- For simplicity, let's think about simple regression. In other words, we explain Y using a variable X. Let's also assume we want to consider up to 3 segments. These limits can be extended. We apply L1 regularization to regulate the number of segments.
+The $(.)^+$ represent ReLU  or $max\{0, . \} $.  Finally, applying (1,...,1) just means adding up all the rows, in other words, the outputs of all the hidden nodes with no bias.
+
+Here's the graphical representation of the model:
+
+
+
+ We apply L1 regularization to regulate the number of segments.
 
 ### Sample data
 
