@@ -1,8 +1,10 @@
 # Piecewise Linear Regression using neural network
 
-![regression1](/regression1.png)
+<img align="center" src="/regression1.png" alt="reg1">
 
-![regression2](/regression2.png)
+<img align="center" src="/regression2.png" alt="reg2">
+
+
 
 ### Motivation
 
@@ -35,6 +37,8 @@ Some examples of piecewise linear regression applications are linked below:
 ###  Proposed method - Neural network application
 
   Let's try to use simple neural network with 1 hidden layer with ReLU (Rectified linear unit) activation function. The benefit is that we can remove the manual input and let the data decide the number of segments and breakpoints, with a very simple feed forward network. In comparison with [3], it is quite similar idea, but this model is much simple. The gate is ReLU with no separate parameters, and there's no clustering etc. It's just summing up output of ReLU with no bias : 
+
+<img align="center" src="/regression1.png" alt="equation1">
 
 ​											->center<-
 
