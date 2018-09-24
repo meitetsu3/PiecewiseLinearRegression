@@ -1,0 +1,46 @@
+digraph G {
+	graph [ordering="out"];
+        rankdir=LR
+	splines=line
+
+        node [fixedsize=true, label=""];
+
+        subgraph cluster_0 {
+		color=white;
+		node [style=solid,color=black, shape=circle];
+		x1[label="x1"];
+		x2[label="x2"];
+		b[label="1"];
+		label = "Independent variables";
+	}
+
+	subgraph cluster_1 {
+		color=white;
+		node [style=solid,color=black, shape=circle];
+		h3[label="h3"];
+		h2[label="h2"];
+		h1[label="h1"];
+		label = "Hidden layer";
+	}
+
+	subgraph cluster_2 {
+		color=white;
+		node [style=solid,color=black, shape=circle];
+		y[label="y"];
+		label="Dependent variable";
+	}
+	
+        x1 -> h1;
+        x1 -> h2[label="W"];
+        x1 -> h3;
+        x2 -> h1;
+        x2 -> h2;
+        x2 -> h3;
+        b-> h1;
+        b-> h2[label="c"];
+        b-> h3;
+        h1 -> y[label="1"];
+        h2 -> y[label="1"];
+        h3 -> y[label="1"];
+
+}

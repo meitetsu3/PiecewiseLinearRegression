@@ -1,8 +1,8 @@
 # Piecewise Linear Regression using neural network
 
-<img align="center" src="/regression1.png" alt="reg1">
+<img align="center" src="/figs/regression1.png" alt="reg1">
 
-<img align="center" src="/regression2.png" alt="reg2">
+<img align="center" src="/figs/regression2.png" alt="reg2">
 
 The math formula does not rendered with the default markdown. Read the pdf Readme instead.
 
@@ -54,11 +54,15 @@ Here, $w_1$ and $w_2$ are slopes for $x_1$ and $x_2$ respectively. $c_i$ is a bi
 
 The $(.)^+$ represent ReLU  or $max\{0, . \} $.  Finally, applying (1,...,1) just means adding up all the rows, in other words, the outputs of all the hidden nodes with no bias.
 
-Here's the graphical representation of the model:
+By adding 1 on the last row on $x$,  and adding $c^T$ on the last row on $W$, the 1st formula can be written as
+$$
+y = (1,...,1) (W^Tx)^+
+$$
+Here's the graphical representation of the model. Note that the bias is expressed as node "1" and bias edges $c$.
 
+<img align="center" src="/figs/feedforward.png" alt="feedforward">
 
-
- We apply L1 regularization to regulate the number of segments.
+ We apply L1 regularization on $W$ to regulate the number of segments.
 
 ### Sample data
 
