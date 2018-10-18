@@ -20,6 +20,7 @@ digraph G {
 		h3[label="h3"];
 		h2[label="h2"];
 		h1[label="h1"];
+		c[label="1"];
 		label = "Hidden layer";
 	}
 
@@ -37,10 +38,11 @@ digraph G {
         x2 -> h2;
         x2 -> h3;
         b-> h1;
-        b-> h2[label="c"];
+        b-> h2[label="b"];
         b-> h3;
         h1 -> y[label="1"];
         h2 -> y[label="1"];
         h3 -> y[label="1"];
+        c -> y[label="c"];
 
 }
